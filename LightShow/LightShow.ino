@@ -1,7 +1,10 @@
-int pushButton = 2;
+int pushButton = 3;
 int led1 = 13;
 int led2 = 12;
 int led3 = 11;
+int led4 = 10;
+int led5 = 9;
+int led6 = 2;
 void setup() {
   // initialize serial communication at 9600 bits per second:
   Serial.begin(9600);
@@ -18,10 +21,16 @@ void loop() {
     analogWrite(led1, random(0,100));
     analogWrite(led2, random(0,100));
     analogWrite(led3, random(0,100));
+    analogWrite(led4, random(0,100));
+    analogWrite(led5, random(0,100));
+    analogWrite(led6, random(0,100));
     delay(random(250,500));
   }else {
     analogWrite(led1, 0);
     analogWrite(led2, 0);
     analogWrite(led3, 0);
+    analogWrite(led4, 0);
+    analogWrite(led5, 0);
+    analogWrite(led6, 0);
   }
 }
