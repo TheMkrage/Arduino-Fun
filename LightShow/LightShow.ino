@@ -13,18 +13,21 @@ void setup() {
   pinMode(led1, OUTPUT);
   pinMode(led2, OUTPUT);
   pinMode(led3, OUTPUT);
+  pinMode(led4, OUTPUT);
+  pinMode(led5, OUTPUT);
+  pinMode(led6, OUTPUT);
 }
 
 void loop() {
   int buttonState = digitalRead(pushButton);
   if (buttonState == 1) {
-    analogWrite(led1, random(0,100));
-    analogWrite(led2, random(0,100));
-    analogWrite(led3, random(0,100));
-    analogWrite(led4, random(0,100));
-    analogWrite(led5, random(0,100));
-    analogWrite(led6, random(0,100));
-    delay(random(250,500));
+    analogWrite(led1, random(0,255));
+    analogWrite(led2, random(0,255));
+    analogWrite(led3, random(0,255));
+    analogWrite(led4, random(0,255));
+    analogWrite(led5, random(0,12));
+    analogWrite(led6, random(0,98));
+    delay(50);
   }else {
     analogWrite(led1, 0);
     analogWrite(led2, 0);
